@@ -1,0 +1,35 @@
+.card-header{
+text-align: center;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+.text-primary{
+    color: #337ab7;
+    border-bottom: 1px solid #337ab7;
+    margin: 10px;
+}
+
+th{
+    background-color: #337ab7;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+td{
+    padding: 12px;
+    text-align: center;
+}
+img{
+width: 13%;
+
+}
+
+tr{
+    border-bottom: 1px solid #ddd;
+}

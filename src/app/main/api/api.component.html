@@ -1,0 +1,62 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">{{heading | uppercase}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Date of Birth
+                                </th>
+                                <th>
+                                    Gender
+                                </th>
+                                <th>
+                                    house
+                                </th>
+                                <th>
+                                    Actor
+                                </th>
+                                <th>
+                                    Image
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of data">
+                                    <td>
+                                        {{item.name}}
+                                    </td>
+                                    <td>
+                                        {{item.dateOfBirth}}
+                                    </td>
+                                    <td>
+                                        {{item.gender}}
+                                    </td>
+                                    <td>
+                                        {{item.house}}
+                                    </td>
+                                    <td>
+                                        {{item.actor}}
+                                    </td>
+                                    <td style="width: 15%;">
+                                        <img class="img"  src={{item.image}}>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
