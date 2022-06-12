@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CsvComponent } from './csv.component';
+import { GridComponent } from './grid.component';
 
-describe('CsvComponent', () => {
-  let component: CsvComponent;
-  let fixture: ComponentFixture<CsvComponent>;
+describe('GridComponent', () => {
+  let component: GridComponent;
+  let fixture: ComponentFixture<GridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CsvComponent ]
+      declarations: [ GridComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CsvComponent);
+    fixture = TestBed.createComponent(GridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

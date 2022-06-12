@@ -3,27 +3,26 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ApiComponent } from './api/api.component';
-import { CsvComponent } from './csv/csv.component';
+import { TableComponent } from './table/table.component';
+import { GridComponent } from './grid/grid.component';
 
 const routes: Routes = [
   {
     path: '',component: MainComponent,
   },
   {
-    path:'api',component:ApiComponent
+    path:'table',component:TableComponent
   },
   {
-    path:'csv',component:CsvComponent
+    path:'grid',component:GridComponent
   }
 ];
 
 @NgModule({
   declarations: [
     MainComponent,
-    ApiComponent,
-    CsvComponent,
-
+    TableComponent,
+    GridComponent
   ],
   imports: [
     CommonModule,

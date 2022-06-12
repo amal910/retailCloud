@@ -8,13 +8,7 @@ const routes: Routes = [
     loadChildren: async () =>
       (await import('./main/main.module'))
         .MainModule,
-  },
-  // {
-  //   path: 'table',
-  //   loadChildren: async () =>
-  //     (await import('./components/main/table/table.module'))
-  //       .TableModule,
-  // },
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,18 @@
+.main{
+
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+}
+.btn{
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    font-size: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(89deg,#158c6a,#00bd96);
+    color: #fff;
+    cursor: pointer;
+    margin-right: 50px;
+}

@@ -3,16 +3,16 @@ import { Subscription } from 'rxjs';
 import { ApiService } from 'src/app/shared/service/api.service';
 
 @Component({
-  selector: 'app-api',
-  templateUrl: './api.component.html',
-  styleUrls: ['./api.component.css']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css']
 })
-export class ApiComponent implements OnInit {
+export class TableComponent implements OnInit {
 
   subscriptions: Subscription[] = [];
   data:any []=[]
 
-  heading = 'Api Data';
+  heading = 'Table Data';
   
   constructor(
     private apiService: ApiService,
@@ -26,10 +26,17 @@ export class ApiComponent implements OnInit {
   getdata(){
     this.subscriptions.push(
       this.apiService.getApiData().subscribe((res:any)=>{
-        console.log(res);
         this.data=res;
       })
     )
+  }
+
+  Download(){
+    this.apiService.downloadFile(this.data, 'jsontocsv');
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
 }
