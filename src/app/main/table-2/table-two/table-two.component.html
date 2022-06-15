@@ -1,0 +1,91 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">{{heading | uppercase}}</h4>
+                    <div class="btn-div">
+                        <button class="btn" (click)="Download()">Download CSV</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>
+                                    S.No
+                                </th>
+                                <th>
+                                    district
+                                </th>
+                                <th>
+                                    active
+                                </th>
+                                <th>
+                                    confirmed
+                                </th>
+                                <th>
+                                    deceased
+                                </th>
+                                <th>
+                                    home_obs
+                                </th>
+                                <th>
+                                    hospital_obs
+                                </th>
+                                <th>
+                                    hospital_today
+                                </th>
+                                <th>
+                                    recovered
+                                </th>
+                                <th>
+                                    total_obs
+                                </th>
+                            </thead>
+                            <tbody>
+                                <!-- <tr *ngFor="let item of data let i = index"> -->
+                                <tr *ngFor="let item of data |keyvalue let i=index">
+                                    <td>
+                                        {{i+1}}
+                                    </td>
+                                    <td>
+                                        {{item.key}}
+                                    </td>
+                                    <td>
+                                        {{item.value.active}}
+                                    </td>
+                                    <td>
+                                        {{item.value.confirmed}}
+                                    </td>
+                                    <td>
+                                        {{item.value.deceased}}
+                                    </td>
+                                    <td>
+                                        {{item.value.home_obs}}
+                                    </td>
+                                    <td>
+                                        {{item.value.hospital_obs}}
+                                    </td>
+                                    <td>
+                                        {{item.value.hospital_today}}
+                                    </td>
+                                    <td>
+                                        {{item.value.recovered}}
+                                    </td>
+                                    <td>
+                                        {{item.value.total_obs}}
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

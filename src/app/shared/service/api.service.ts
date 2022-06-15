@@ -19,6 +19,10 @@ export class ApiService {
       return this.http.get('http://hp-api.herokuapp.com/api/characters');
     }
 
+    getApiDataTwo() {
+      return this.http.get('https://keralastats.coronasafe.live/latest.json');
+    }
+
 
     downloadFile(data:any, filename='data') {
       let csvData = this.ConvertToCSV(data, ['name','dateOfBirth', 'gender', 'house', 'actor']);
