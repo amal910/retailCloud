@@ -23,16 +23,7 @@ export class TableTwoComponent implements OnInit {
   constructor(
     private apiService: ApiService
   ) {}
-validation_messages :any = {
-    "key_1": {
-        "your_name": "jimmy",
-        "your_msg": "hello world"
-    },
-    "key_2": {
-        "your_name": "billy",
-        "your_msg": "foo equals bar"
-    }
-}
+
 
   ngOnInit(): void {
     this.getdataTwo();
@@ -60,7 +51,7 @@ validation_messages :any = {
     let dwldLink = document.createElement("a");
     let url = URL.createObjectURL(blob);
     let isSafariBrowser = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
-    if (isSafariBrowser) {  //if Safari open in new window to save file with random filename.
+    if (isSafariBrowser) {  
         dwldLink.setAttribute("target", "_blank");
     }
     dwldLink.setAttribute("href", url);
